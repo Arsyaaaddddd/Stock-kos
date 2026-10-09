@@ -1,4 +1,13 @@
-import { Kamar } from "@/types/kamar";
+type KamarData = {
+  id: string;
+  nomor: string;
+  tipe: string;
+  harga: number;
+  status: "tersedia" | "terisi" | "perbaikan";
+  fasilitas?: string;
+};
+
+export type Kamar = KamarData;
 
 export const daftarKamar: Kamar[] = [
   { id: "1", nomor: "A1", tipe: "Standar", harga: 800000, status: "tersedia", fasilitas: "Kasur, lemari" },

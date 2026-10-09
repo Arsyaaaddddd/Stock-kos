@@ -1,4 +1,8 @@
-import { Kamar, StatusKamar } from "@/types/kamar";
+export type StatusKamar = "tersedia" | "terisi" | "perbaikan";
+
+type Kamar = {
+  status: StatusKamar;
+};
 
 export function formatRupiah(angka: number): string {
   return "Rp " + angka.toLocaleString("id-ID");
